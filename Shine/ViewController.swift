@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        nextButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
         
     }
    
@@ -54,6 +54,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc fileprivate func animateButton(sender: UIButton){
+        print("Animated")
+        self.animateView(sender)
+    }
     
-    
+    fileprivate func animateView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }) { (_) in
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 3, initialSpringVelocity: 15, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)},completion: nil)
+        }
+    }
 }
