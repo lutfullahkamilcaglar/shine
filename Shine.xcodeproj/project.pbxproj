@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A9E11E7963575875833D5A /* Pods_Shine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567465CE66417B97967E1DD3 /* Pods_Shine.framework */; };
 		F534B960291C00C50099EE2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F534B95F291C00C50099EE2C /* AppDelegate.swift */; };
 		F534B962291C00C50099EE2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F534B961291C00C50099EE2C /* SceneDelegate.swift */; };
 		F534B964291C00C50099EE2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F534B963291C00C50099EE2C /* ViewController.swift */; };
 		F534B967291C00C50099EE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F534B965291C00C50099EE2C /* Main.storyboard */; };
 		F534B969291C00C60099EE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F534B968291C00C60099EE2C /* Assets.xcassets */; };
 		F534B96C291C00C60099EE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F534B96A291C00C60099EE2C /* LaunchScreen.storyboard */; };
+		F5AFD404291D787F00518E12 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD403291D787F00518E12 /* Networking.swift */; };
+		F5AFD406291D800900518E12 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD405291D800900518E12 /* AdviceData.swift */; };
+		F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE3166291EA0C0001FEDE0 /* PushButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1383729A2604290705671D64 /* Pods-Shine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shine.debug.xcconfig"; path = "Target Support Files/Pods-Shine/Pods-Shine.debug.xcconfig"; sourceTree = "<group>"; };
+		567465CE66417B97967E1DD3 /* Pods_Shine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB212E639AD47A57DA32EFD0 /* Pods-Shine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shine.release.xcconfig"; path = "Target Support Files/Pods-Shine/Pods-Shine.release.xcconfig"; sourceTree = "<group>"; };
 		F534B95C291C00C50099EE2C /* Shine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F534B95F291C00C50099EE2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F534B961291C00C50099EE2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		F534B968291C00C60099EE2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F534B96B291C00C60099EE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F534B96D291C00C60099EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5AFD403291D787F00518E12 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		F5AFD405291D800900518E12 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
+		F5FE3166291EA0C0001FEDE0 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A9E11E7963575875833D5A /* Pods_Shine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1F69B528E77C87D471F7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567465CE66417B97967E1DD3 /* Pods_Shine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B519D8F532FA05A393B01097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1383729A2604290705671D64 /* Pods-Shine.debug.xcconfig */,
+				DB212E639AD47A57DA32EFD0 /* Pods-Shine.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F534B953291C00C50099EE2C = {
 			isa = PBXGroup;
 			children = (
 				F534B95E291C00C50099EE2C /* Shine */,
 				F534B95D291C00C50099EE2C /* Products */,
+				B519D8F532FA05A393B01097 /* Pods */,
+				6E1F69B528E77C87D471F7FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +88,10 @@
 			children = (
 				F534B95F291C00C50099EE2C /* AppDelegate.swift */,
 				F534B961291C00C50099EE2C /* SceneDelegate.swift */,
+				F5AFD405291D800900518E12 /* AdviceData.swift */,
+				F5AFD403291D787F00518E12 /* Networking.swift */,
 				F534B963291C00C50099EE2C /* ViewController.swift */,
+				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
 				F534B965291C00C50099EE2C /* Main.storyboard */,
 				F534B968291C00C60099EE2C /* Assets.xcassets */,
 				F534B96A291C00C60099EE2C /* LaunchScreen.storyboard */,
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F534B970291C00C60099EE2C /* Build configuration list for PBXNativeTarget "Shine" */;
 			buildPhases = (
+				DE3D8D5328D7C1EFB05125BC /* [CP] Check Pods Manifest.lock */,
 				F534B958291C00C50099EE2C /* Sources */,
 				F534B959291C00C50099EE2C /* Frameworks */,
 				F534B95A291C00C50099EE2C /* Resources */,
+				5D202E7BE4A0FC31771DB985 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +168,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D202E7BE4A0FC31771DB985 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shine/Pods-Shine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shine/Pods-Shine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shine/Pods-Shine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3D8D5328D7C1EFB05125BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F534B958291C00C50099EE2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F534B964291C00C50099EE2C /* ViewController.swift in Sources */,
+				F5AFD406291D800900518E12 /* AdviceData.swift in Sources */,
 				F534B960291C00C50099EE2C /* AppDelegate.swift in Sources */,
 				F534B962291C00C50099EE2C /* SceneDelegate.swift in Sources */,
+				F5AFD404291D787F00518E12 /* Networking.swift in Sources */,
+				F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +362,7 @@
 		};
 		F534B971291C00C60099EE2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1383729A2604290705671D64 /* Pods-Shine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +391,7 @@
 		};
 		F534B972291C00C60099EE2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB212E639AD47A57DA32EFD0 /* Pods-Shine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
