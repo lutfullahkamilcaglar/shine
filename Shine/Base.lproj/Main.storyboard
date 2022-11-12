@@ -12,43 +12,86 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-n9-CYj">
-                                <rect key="frame" x="0.0" y="195" width="393" height="271"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="271" id="kKr-Dm-Z8J"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search advice" borderStyle="roundedRect" placeholder="Type something..." clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rWv-mQ-4Ld">
-                                <rect key="frame" x="84.333333333333329" y="92" width="216.66666666666669" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-RJ-ifa">
+                                <rect key="frame" x="99" y="446" width="194" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Get advice"/>
+                                <connections>
+                                    <segue destination="XMi-2P-ObW" kind="presentation" modalPresentationStyle="fullScreen" id="7bg-ae-rrK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="adviceTextView" destination="9pa-n9-CYj" id="do4-Uj-ylu"/>
+                        <outlet property="favButton" destination="1wb-i7-9FF" id="QuK-yC-hcM"/>
+                        <outlet property="nextButton" destination="pWS-SV-tHV" id="Sah-2P-P7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AOl-rO-Ttn">
+            <objects>
+                <viewController id="XMi-2P-ObW" customClass="ViewController" customModule="Shine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y77-5f-e64">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-W3-LKO">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search advice" borderStyle="roundedRect" placeholder="Type something..." clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-2w-wCU">
+                                <rect key="frame" x="16" y="59" width="308" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-yd-E3u">
-                                <rect key="frame" x="309" y="93" width="40" height="38.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3wA-Xg-eyo"/>
-                                    <constraint firstAttribute="width" constant="40" id="9SY-9X-d7t"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-96-8qw">
+                                <rect key="frame" x="334" y="60" width="40" height="38.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
                                 <connections>
-                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BcE-e7-pQP"/>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns6-e2-0vz"/>
+                                    <action selector="searchPressed:" destination="XMi-2P-ObW" eventType="touchUpInside" id="YUL-5e-Ghf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWS-SV-tHV" customClass="PushButton" customModule="Shine" customModuleProvider="target">
+                                <rect key="frame" x="269" y="741" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="executeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7H-ir-FUr"/>
+                                    <action selector="executeRequest:" destination="XMi-2P-ObW" eventType="touchUpInside" id="rji-HK-PG2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-n9-CYj">
+                                <rect key="frame" x="65" y="219" width="276" height="386"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-i7-9FF">
-                                <rect key="frame" x="27" y="701" width="132" height="120"/>
+                                <rect key="frame" x="39" y="743" width="132" height="50.333333333333371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -58,56 +101,41 @@
                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="favButton:" destination="XMi-2P-ObW" eventType="touchUpInside" id="8Dn-jK-9Zv"/>
                                     <action selector="favButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5L-MB-BqZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWS-SV-tHV" customClass="PushButton" customModule="Shine" customModuleProvider="target">
-                                <rect key="frame" x="267" y="734" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="executeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7H-ir-FUr"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="bHf-yd-E3u" firstAttribute="top" secondItem="rWv-mQ-4Ld" secondAttribute="top" id="PBG-Hl-GZ5"/>
-                            <constraint firstItem="bHf-yd-E3u" firstAttribute="leading" secondItem="rWv-mQ-4Ld" secondAttribute="trailing" constant="8" id="TcQ-y7-Zhz"/>
-                            <constraint firstItem="9pa-n9-CYj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zkt-Yw-17h"/>
-                            <constraint firstItem="9pa-n9-CYj" firstAttribute="top" secondItem="bHf-yd-E3u" secondAttribute="bottom" constant="63" id="ciF-LD-3Kz"/>
-                            <constraint firstItem="bHf-yd-E3u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="cyO-ez-ysn"/>
-                            <constraint firstItem="rWv-mQ-4Ld" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="jWy-l3-Rn2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bHf-yd-E3u" secondAttribute="trailing" constant="44" id="o1I-fC-oTf"/>
-                            <constraint firstItem="9pa-n9-CYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q3I-iR-5qU"/>
-                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LZb-74-4UG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="adviceTextView" destination="9pa-n9-CYj" id="do4-Uj-ylu"/>
-                        <outlet property="favButton" destination="1wb-i7-9FF" id="QuK-yC-hcM"/>
-                        <outlet property="nextButton" destination="pWS-SV-tHV" id="Sah-2P-P7x"/>
-                        <outlet property="searchTextField" destination="rWv-mQ-4Ld" id="n9o-Yz-GVv"/>
+                        <outlet property="adviceTextView" destination="9pa-n9-CYj" id="atq-Ay-ylP"/>
+                        <outlet property="favButton" destination="1wb-i7-9FF" id="VYO-KC-LgI"/>
+                        <outlet property="nextButton" destination="pWS-SV-tHV" id="5u0-D6-7MT"/>
+                        <outlet property="searchTextField" destination="3xf-2w-wCU" id="2LQ-vF-NDi"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qow-Ab-7gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-680.15267175572512" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-245.03816793893128" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="1179" height="2556"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

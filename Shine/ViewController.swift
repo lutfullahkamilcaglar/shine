@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     var networking = Networking()
     
-    
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var adviceTextView: UITextView!
     @IBOutlet weak var nextButton: UIButton!
@@ -21,19 +20,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let largeConfiguration = UIImage.SymbolConfiguration(pointSize: 35, weight: .bold, scale: .large)
+        
+        favButton.setImage(UIImage(systemName: "star", withConfiguration: largeConfiguration), for: .normal)
         
         nextButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
         
+
     }
    
     @IBAction func favButton(_ sender: Any) {
         
+        let largeConfiguration = UIImage.SymbolConfiguration(pointSize: 35, weight: .bold, scale: .large)
         
-        favButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        favButton.setImage(UIImage(systemName: "star.fill", withConfiguration: largeConfiguration), for: .normal)
         
         
     }
-
     
     
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -42,7 +45,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func executeRequest(_ sender: Any){
-        
         
         networking.executeJson() { (json, error) in
             if let error = error {

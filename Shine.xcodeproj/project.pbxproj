@@ -16,6 +16,7 @@
 		F534B96C291C00C60099EE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F534B96A291C00C60099EE2C /* LaunchScreen.storyboard */; };
 		F5AFD404291D787F00518E12 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD403291D787F00518E12 /* Networking.swift */; };
 		F5AFD406291D800900518E12 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD405291D800900518E12 /* AdviceData.swift */; };
+		F5B14194291F1590001793E3 /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B14193291F1590001793E3 /* Untitled.png */; };
 		F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE3166291EA0C0001FEDE0 /* PushButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		F534B96D291C00C60099EE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5AFD403291D787F00518E12 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F5AFD405291D800900518E12 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
+		F5B14193291F1590001793E3 /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
 		F5FE3166291EA0C0001FEDE0 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
 				F534B965291C00C50099EE2C /* Main.storyboard */,
 				F534B968291C00C60099EE2C /* Assets.xcassets */,
+				F5B14193291F1590001793E3 /* Untitled.png */,
 				F534B96A291C00C60099EE2C /* LaunchScreen.storyboard */,
 				F534B96D291C00C60099EE2C /* Info.plist */,
 			);
@@ -160,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B14194291F1590001793E3 /* Untitled.png in Resources */,
 				F534B96C291C00C60099EE2C /* LaunchScreen.storyboard in Resources */,
 				F534B969291C00C60099EE2C /* Assets.xcassets in Resources */,
 				F534B967291C00C50099EE2C /* Main.storyboard in Resources */,
