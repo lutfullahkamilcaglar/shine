@@ -30,12 +30,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let largeConfiguration = UIImage.SymbolConfiguration(pointSize: 35, weight: .bold, scale: .large)
-        
-        favButton.setImage(UIImage(systemName: "star", withConfiguration: largeConfiguration), for: .normal)
+//        let largeConfiguration = UIImage.SymbolConfiguration(pointSize: 35, weight: .bold, scale: .large)
+//
+//        favButton.setImage(UIImage(systemName: "star", withConfiguration: largeConfiguration), for: .normal)
         nextButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
         self.shareButton.layer.cornerRadius = 20
-        
         self.adviceTextView.text = adviceText
     }
     
@@ -43,7 +42,6 @@ class ViewController: UIViewController {
     @IBAction func shareButton(_ sender: Any) {
         self.sharePopUp = PopUp(frame: self.view.frame)
         self.sharePopUp.exitButton.addTarget(self, action: #selector(closeExitButton), for: .touchUpInside)
-        popUpShare.shareTextView.text = "test"
         self.view.addSubview(sharePopUp)
         
         
@@ -79,13 +77,11 @@ class ViewController: UIViewController {
         
     }
     
-   
-    
     @IBAction func searchPressed(_ sender: UIButton) {
-        print("Search pressed")
-        
+       
+
     }
-    
+ 
     
     @IBAction func executeRequest(_ sender: Any){
         //nextButton action
@@ -94,7 +90,6 @@ class ViewController: UIViewController {
                 print(error)
                 return
             }
-            
             let advice = (json?.advice.description)!
             self.adviceText = advice
             self.adviceTextView.text = self.adviceText
@@ -102,7 +97,6 @@ class ViewController: UIViewController {
     }
     
     @objc fileprivate func animateButton(sender: UIButton){
-        print("Animated")
         self.animateView(sender)
     }
     

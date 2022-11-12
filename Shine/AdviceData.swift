@@ -15,3 +15,9 @@ struct Slip: Codable {
     let advice: String
     let id: Int
 }
+
+
+
+
+
+    

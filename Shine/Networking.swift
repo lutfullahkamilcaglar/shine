@@ -18,8 +18,19 @@ class Networking {
         let adviceURL = "https://api.adviceslip.com/advice"
         let request = AF.request(adviceURL)
         print(request)
-      
     }
+    
+    
+    func adviceRequest(query: String, completion: @escaping completionHandler){
+        
+        let adviceURL = "https://api.adviceslip.com/advice/search/"
+        
+        let urlString = "\(adviceURL)\(query)"
+        let request = AF.request(urlString)
+        
+    }
+    
+    
     
     typealias completionHandler = (Slip?,String?) -> Void
     
