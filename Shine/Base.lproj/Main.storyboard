@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-RJ-ifa">
-                                <rect key="frame" x="99" y="446" width="194" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-RJ-ifa">
+                                <rect key="frame" x="99" y="446" width="195" height="91"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Get advice"/>
                                 <connections>
@@ -29,6 +28,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Cv1-F4-HgL"/>
+                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUQ-rD-FFW"/>
+                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="387" id="obU-4A-Juf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RaY-RJ-ifa" secondAttribute="bottom" constant="281" id="vYd-LV-MWv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="adviceTextView" destination="9pa-n9-CYj" id="do4-Uj-ylu"/>
@@ -53,26 +58,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search advice" borderStyle="roundedRect" placeholder="Type something..." clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-2w-wCU">
-                                <rect key="frame" x="16" y="59" width="308" height="43"/>
+                                <rect key="frame" x="15" y="60" width="325" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-96-8qw">
-                                <rect key="frame" x="334" y="60" width="40" height="38.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
-                                <connections>
-                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns6-e2-0vz"/>
-                                    <action selector="searchPressed:" destination="XMi-2P-ObW" eventType="touchUpInside" id="YUL-5e-Ghf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWS-SV-tHV" customClass="PushButton" customModule="Shine" customModuleProvider="target">
-                                <rect key="frame" x="269" y="741" width="55" height="55"/>
+                                <rect key="frame" x="280" y="740" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -83,7 +77,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-n9-CYj">
-                                <rect key="frame" x="65" y="219" width="276" height="386"/>
+                                <rect key="frame" x="65" y="220" width="275" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
@@ -91,18 +85,42 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-i7-9FF">
-                                <rect key="frame" x="39" y="743" width="132" height="50.333333333333371"/>
+                                <rect key="frame" x="50" y="740" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="bottom" buttonSize="large">
                                     <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                    <color key="baseForegroundColor" systemColor="systemGray2Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="favButton:" destination="XMi-2P-ObW" eventType="touchUpInside" id="8Dn-jK-9Zv"/>
                                     <action selector="favButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5L-MB-BqZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXK-VG-cSj">
+                                <rect key="frame" x="175" y="510" width="65" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77112928123185132" green="0.77112928123185132" blue="0.77112928123185132" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="XMi-2P-ObW" eventType="touchUpInside" id="k11-zv-Sd2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-96-8qw">
+                                <rect key="frame" x="350" y="65" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns6-e2-0vz"/>
+                                    <action selector="searchPressed:" destination="XMi-2P-ObW" eventType="touchUpInside" id="YUL-5e-Ghf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,6 +132,7 @@
                         <outlet property="favButton" destination="1wb-i7-9FF" id="VYO-KC-LgI"/>
                         <outlet property="nextButton" destination="pWS-SV-tHV" id="5u0-D6-7MT"/>
                         <outlet property="searchTextField" destination="3xf-2w-wCU" id="2LQ-vF-NDi"/>
+                        <outlet property="shareButton" destination="kXK-VG-cSj" id="peH-lb-jil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qow-Ab-7gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,9 +155,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

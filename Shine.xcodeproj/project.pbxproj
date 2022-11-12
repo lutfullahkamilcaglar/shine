@@ -17,6 +17,9 @@
 		F5AFD404291D787F00518E12 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD403291D787F00518E12 /* Networking.swift */; };
 		F5AFD406291D800900518E12 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFD405291D800900518E12 /* AdviceData.swift */; };
 		F5B14194291F1590001793E3 /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B14193291F1590001793E3 /* Untitled.png */; };
+		F5B14196291FDA3E001793E3 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B14195291FDA3E001793E3 /* PopUp.swift */; };
+		F5B14198291FDA79001793E3 /* PopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B14197291FDA79001793E3 /* PopUp.xib */; };
+		F5B1419A291FE6DA001793E3 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B14199291FE6DA001793E3 /* Style.swift */; };
 		F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE3166291EA0C0001FEDE0 /* PushButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		F5AFD403291D787F00518E12 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F5AFD405291D800900518E12 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
 		F5B14193291F1590001793E3 /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
+		F5B14195291FDA3E001793E3 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		F5B14197291FDA79001793E3 /* PopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUp.xib; sourceTree = "<group>"; };
+		F5B14199291FE6DA001793E3 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		F5FE3166291EA0C0001FEDE0 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,8 +98,11 @@
 				F534B961291C00C50099EE2C /* SceneDelegate.swift */,
 				F5AFD405291D800900518E12 /* AdviceData.swift */,
 				F5AFD403291D787F00518E12 /* Networking.swift */,
+				F5B14199291FE6DA001793E3 /* Style.swift */,
 				F534B963291C00C50099EE2C /* ViewController.swift */,
+				F5B14197291FDA79001793E3 /* PopUp.xib */,
 				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
+				F5B14195291FDA3E001793E3 /* PopUp.swift */,
 				F534B965291C00C50099EE2C /* Main.storyboard */,
 				F534B968291C00C60099EE2C /* Assets.xcassets */,
 				F5B14193291F1590001793E3 /* Untitled.png */,
@@ -166,6 +175,7 @@
 				F5B14194291F1590001793E3 /* Untitled.png in Resources */,
 				F534B96C291C00C60099EE2C /* LaunchScreen.storyboard in Resources */,
 				F534B969291C00C60099EE2C /* Assets.xcassets in Resources */,
+				F5B14198291FDA79001793E3 /* PopUp.xib in Resources */,
 				F534B967291C00C50099EE2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +232,11 @@
 				F534B964291C00C50099EE2C /* ViewController.swift in Sources */,
 				F5AFD406291D800900518E12 /* AdviceData.swift in Sources */,
 				F534B960291C00C50099EE2C /* AppDelegate.swift in Sources */,
+				F5B14196291FDA3E001793E3 /* PopUp.swift in Sources */,
 				F534B962291C00C50099EE2C /* SceneDelegate.swift in Sources */,
 				F5AFD404291D787F00518E12 /* Networking.swift in Sources */,
 				F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */,
+				F5B1419A291FE6DA001793E3 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
