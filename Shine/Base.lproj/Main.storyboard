@@ -17,23 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-RJ-ifa">
-                                <rect key="frame" x="99" y="446" width="195" height="91"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="getAdvice.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-cO-nXm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTk-Mt-ROi">
+                                <rect key="frame" x="80" y="298" width="235" height="254"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Get advice"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Advice">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="XMi-2P-ObW" kind="presentation" modalPresentationStyle="fullScreen" id="7bg-ae-rrK"/>
+                                    <segue destination="XMi-2P-ObW" kind="showDetail" id="Jvc-mV-g1p"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Cv1-F4-HgL"/>
-                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUQ-rD-FFW"/>
-                            <constraint firstItem="RaY-RJ-ifa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="387" id="obU-4A-Juf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RaY-RJ-ifa" secondAttribute="bottom" constant="281" id="vYd-LV-MWv"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="adviceTextView" destination="9pa-n9-CYj" id="do4-Uj-ylu"/>
@@ -48,7 +50,7 @@
         <!--View Controller-->
         <scene sceneID="AOl-rO-Ttn">
             <objects>
-                <viewController id="XMi-2P-ObW" customClass="ViewController" customModule="Shine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XMi-2P-ObW" customClass="ViewController" customModule="Shine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y77-5f-e64">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +144,7 @@
     </scenes>
     <resources>
         <image name="background" width="1179" height="2556"/>
+        <image name="getAdvice.png" width="375" height="375"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="opaqueSeparatorColor">

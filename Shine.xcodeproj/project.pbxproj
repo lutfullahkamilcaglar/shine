@@ -20,6 +20,7 @@
 		F5B14196291FDA3E001793E3 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B14195291FDA3E001793E3 /* PopUp.swift */; };
 		F5B14198291FDA79001793E3 /* PopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B14197291FDA79001793E3 /* PopUp.xib */; };
 		F5B1419A291FE6DA001793E3 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B14199291FE6DA001793E3 /* Style.swift */; };
+		F5E6F0052922E12E00DA34EE /* getAdvice.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E6F0042922E12D00DA34EE /* getAdvice.png */; };
 		F5FE3167291EA0C0001FEDE0 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE3166291EA0C0001FEDE0 /* PushButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		F5B14195291FDA3E001793E3 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		F5B14197291FDA79001793E3 /* PopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUp.xib; sourceTree = "<group>"; };
 		F5B14199291FE6DA001793E3 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		F5E6F0042922E12D00DA34EE /* getAdvice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getAdvice.png; sourceTree = "<group>"; };
 		F5FE3166291EA0C0001FEDE0 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
 				F5B14195291FDA3E001793E3 /* PopUp.swift */,
 				F534B965291C00C50099EE2C /* Main.storyboard */,
+				F5E6F0042922E12D00DA34EE /* getAdvice.png */,
 				F534B968291C00C60099EE2C /* Assets.xcassets */,
 				F5B14193291F1590001793E3 /* Untitled.png */,
 				F534B96A291C00C60099EE2C /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				F534B969291C00C60099EE2C /* Assets.xcassets in Resources */,
 				F5B14198291FDA79001793E3 /* PopUp.xib in Resources */,
 				F534B967291C00C50099EE2C /* Main.storyboard in Resources */,
+				F5E6F0052922E12E00DA34EE /* getAdvice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
