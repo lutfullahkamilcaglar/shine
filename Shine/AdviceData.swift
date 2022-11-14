@@ -16,7 +16,17 @@ struct Slip: Codable {
     let id: Int
 }
 
+struct SlipQuestion: Codable {
+    let total_results: String
+    let query: String
+    let slips: [Slips]
+}
 
+struct Slips: Codable {
+    let id: Int
+    let advice: String
+    let date: String
+}
 
 
 

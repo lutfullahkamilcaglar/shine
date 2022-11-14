@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var networking = Networking()
+   //var networking = Networking()
     var popUpShare = PopUp()
     
     var sharePopUp: PopUp!
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         self.sharePopUp = PopUp(frame: self.view.frame)
         self.sharePopUp.exitButton.addTarget(self, action: #selector(closeExitButton), for: .touchUpInside)
         self.view.addSubview(sharePopUp)
-        
+        self.sharePopUp.updateTextView(getAdvice: adviceText)
         
     }
     
@@ -78,20 +78,41 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
-       
-
+        let searchTextFieldInput = searchTextField.text
+        Networking.shared.adviceRequest(query: searchTextFieldInput!) { (res, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            //print(res as Any)
+            let adviceList: [String] = res?.slips.map { slip in
+                slip.advice
+            } ?? []
+            var bokAdvice = ""
+//            adviceList?.forEach{ advice in
+//                bokAdvice.append("\n Advice: " + advice.description)
+//            }
+            for (index, item) in adviceList.enumerated() {
+                if (index == 0) {
+                    bokAdvice.append("Advice: " + item.description)
+                } else {
+                    bokAdvice.append("\nAdvice: " + item.description)
+                }
+            }
+            self.adviceTextView.text = bokAdvice
+        }
     }
- 
     
     @IBAction func executeRequest(_ sender: Any){
         //nextButton action
-        networking.executeJson() { (json, error) in
+        Networking.shared.executeJson() { (json, error) in
             if let error = error {
                 print(error)
                 return
             }
             let advice = (json?.advice.description)!
             self.adviceText = advice
+            print(advice)
             self.adviceTextView.text = self.adviceText
         }
     }

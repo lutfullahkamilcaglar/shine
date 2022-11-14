@@ -28,7 +28,9 @@ class PopUp: UIView {
         view.frame = frame
         addSubview(view)
     }
-    
+    func updateTextView(getAdvice: String) {
+        shareTextView.text = getAdvice
+    }
     func loadXib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "PopUp", bundle: bundle)
