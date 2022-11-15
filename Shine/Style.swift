@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class buttonStyle: UIButton {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
@@ -37,6 +38,7 @@ class imageSytle: UIImageView {
             self.layer.cornerRadius = cornerRadius
         }
     }
+    
     
     @IBInspectable var boarderWidth: CGFloat = 0 {
         didSet{

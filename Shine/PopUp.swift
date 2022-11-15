@@ -7,11 +7,34 @@
 
 import UIKit
 
-class PopUp: UIView {
 
+class PopUp: UIView {
+    
     @IBOutlet weak var exitButton: UIButton!
     
     @IBOutlet weak var shareTextView: UITextView!
+
+    @IBOutlet weak var shareButton: UIButton!
+    
+    func getCurrentViewController() -> UIViewController? {
+
+       if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+           var currentController: UIViewController! = rootController
+           while( currentController.presentedViewController != nil ) {
+               currentController = currentController.presentedViewController
+           }
+           return currentController
+       }
+       return nil
+
+   }
+    
+    @IBAction func shareSelectedQuote(_ sender: Any){
+        let shareSheetVC = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
+        getCurrentViewController()?.present(shareSheetVC, animated: true)
+        
+    }
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -28,9 +51,11 @@ class PopUp: UIView {
         view.frame = frame
         addSubview(view)
     }
+    
     func updateTextView(getAdvice: String) {
         shareTextView.text = getAdvice
     }
+    
     func loadXib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "PopUp", bundle: bundle)

@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,7 +38,6 @@
                     </view>
                     <connections>
                         <outlet property="adviceTextView" destination="9pa-n9-CYj" id="do4-Uj-ylu"/>
-                        <outlet property="favButton" destination="1wb-i7-9FF" id="QuK-yC-hcM"/>
                         <outlet property="nextButton" destination="pWS-SV-tHV" id="Sah-2P-P7x"/>
                     </connections>
                 </viewController>
@@ -78,7 +76,7 @@
                                     <action selector="executeRequest:" destination="XMi-2P-ObW" eventType="touchUpInside" id="rji-HK-PG2"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-n9-CYj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Play the button to get an advice. " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-n9-CYj">
                                 <rect key="frame" x="65" y="220" width="275" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -86,26 +84,10 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-i7-9FF">
-                                <rect key="frame" x="50" y="740" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" imagePlacement="bottom" buttonSize="large">
-                                    <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" systemColor="systemGray2Color"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="favButton:" destination="XMi-2P-ObW" eventType="touchUpInside" id="8Dn-jK-9Zv"/>
-                                    <action selector="favButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5L-MB-BqZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXK-VG-cSj">
-                                <rect key="frame" x="175" y="525" width="65" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXK-VG-cSj">
+                                <rect key="frame" x="50" y="740" width="65" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77112928123185132" green="0.77112928123185132" blue="0.77112928123185132" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Share">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,7 +113,6 @@
                     </view>
                     <connections>
                         <outlet property="adviceTextView" destination="9pa-n9-CYj" id="atq-Ay-ylP"/>
-                        <outlet property="favButton" destination="1wb-i7-9FF" id="VYO-KC-LgI"/>
                         <outlet property="nextButton" destination="pWS-SV-tHV" id="5u0-D6-7MT"/>
                         <outlet property="searchTextField" destination="3xf-2w-wCU" id="2LQ-vF-NDi"/>
                         <outlet property="shareButton" destination="kXK-VG-cSj" id="peH-lb-jil"/>
@@ -146,7 +127,6 @@
         <image name="background" width="1179" height="2556"/>
         <image name="getAdvice.png" width="375" height="375"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

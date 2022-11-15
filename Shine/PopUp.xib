@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUp" customModule="Shine" customModuleProvider="target">
             <connections>
                 <outlet property="exitButton" destination="mMP-MB-KxV" id="Zec-CQ-K3t"/>
+                <outlet property="shareButton" destination="hv3-fz-gcO" id="8Zv-IB-5pl"/>
                 <outlet property="shareTextView" destination="ttB-aw-sze" id="rCV-fK-vEe"/>
             </connections>
         </placeholder>
@@ -54,6 +55,15 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-fz-gcO" customClass="shareBtn" customModule="Shine" customModuleProvider="target">
+                            <rect key="frame" x="116" y="315" width="75" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="shareSelectedQuote:" destination="-1" eventType="touchUpInside" id="kye-XV-FYJ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -85,6 +95,7 @@
             </constraints>
             <connections>
                 <outlet property="exitButton" destination="mMP-MB-KxV" id="UyP-ev-0Qc"/>
+                <outlet property="shareButton" destination="hv3-fz-gcO" id="kRt-XF-fxZ"/>
             </connections>
             <point key="canvasLocation" x="130.53435114503816" y="-12.67605633802817"/>
         </view>
