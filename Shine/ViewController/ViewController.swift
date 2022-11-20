@@ -9,28 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
-   //var networking = Networking()
+    let networkManager = Networking()
+    
     var popUpShare = PopUp()
     
     var sharePopUp: PopUp!
-    
-    var adviceText: String = ""
-    
+    var adviceText = ""
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var adviceTextView: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
         self.shareButton.layer.cornerRadius = 20
-        self.adviceTextView.text = adviceText
     }
-
+    
     
     @IBAction func shareButton(_ sender: Any) {
         self.sharePopUp = PopUp(frame: self.view.frame)
@@ -43,42 +41,38 @@ class ViewController: UIViewController {
         self.sharePopUp.removeFromSuperview()
     }
     
-    @IBAction func searchPressed(_ sender: UIButton) {
-        let searchTextFieldInput = searchTextField.text
-        Networking.shared.adviceRequest(query: searchTextFieldInput!) { (res, error) in
-            if let error = error {
-                print(error)
-                return
-            }
-            //print(res as Any)
-            let adviceList: [String] = res?.slips.map { slip in
-                slip.advice
-            } ?? []
-            var bokAdvice = ""
-//            adviceList?.forEach{ advice in
-//                bokAdvice.append("\n Advice: " + advice.description)
-//            }
-            for (index, item) in adviceList.enumerated() {
-                if (index == 0) {
-                    bokAdvice.append("Advice: " + item.description)
-                } else {
-                    bokAdvice.append("\nAdvice: " + item.description)
+    @IBAction func onClickSearchButton(_ sender: UIButton) {
+        if let searchInput = searchTextField.text {
+            networkManager.adviceRequest(query: searchInput) { (res, error) in
+                if let error = error {
+                    print(error)
+                    return
                 }
+                
+                var searchAdviceText: String = ""
+                let adviceList: [String] = res?.slips.map { slip in
+                    slip.advice
+                } ?? []
+                for (index, item) in adviceList.enumerated() {
+                    if (index == 0) {
+                        searchAdviceText.append("Advice: " + item.description)
+                    } else {
+                        searchAdviceText.append("\nAdvice: " + item.description)
+                    }
+                }
+                self.adviceText = searchAdviceText
+                self.adviceTextView.text = self.adviceText
             }
-            self.adviceTextView.text = bokAdvice
         }
     }
     
-    @IBAction func executeRequest(_ sender: Any){
-        //nextButton action
-        Networking.shared.executeJson() { (json, error) in
+    @IBAction func onClickNextButtonPressed(_ sender: Any){
+        networkManager.executeJson() { (res, error) in
             if let error = error {
                 print(error)
-                return
             }
-            let advice = (json?.advice.description)!
+            let advice = (res?.advice.description)!
             self.adviceText = advice
-            print(advice)
             self.adviceTextView.text = self.adviceText
         }
     }

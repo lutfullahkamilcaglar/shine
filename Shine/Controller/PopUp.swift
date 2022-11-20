@@ -8,7 +8,8 @@
 import UIKit
 
 
-class PopUp: UIView {
+class PopUp: UIView { // convert to UIViewController
+    
     
     @IBOutlet weak var exitButton: UIButton!
     
@@ -26,10 +27,12 @@ class PopUp: UIView {
            return currentController
        }
        return nil
-
    }
     
+    
+    
     @IBAction func shareSelectedQuote(_ sender: Any){
+        
         let shareSheetVC = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
         getCurrentViewController()?.present(shareSheetVC, animated: true)
         

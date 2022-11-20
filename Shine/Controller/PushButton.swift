@@ -23,7 +23,6 @@ class PushButton: UIButton {
     
     func createRectangle(_ rect: CGRect) {
         path = UIBezierPath()
-        
     }
 
     override func draw(_ rect: CGRect) {

@@ -98,14 +98,11 @@
 			children = (
 				F534B95F291C00C50099EE2C /* AppDelegate.swift */,
 				F534B961291C00C50099EE2C /* SceneDelegate.swift */,
-				F5AFD405291D800900518E12 /* AdviceData.swift */,
-				F5AFD403291D787F00518E12 /* Networking.swift */,
-				F5B14199291FE6DA001793E3 /* Style.swift */,
-				F534B963291C00C50099EE2C /* ViewController.swift */,
-				F5B14197291FDA79001793E3 /* PopUp.xib */,
-				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
-				F5B14195291FDA3E001793E3 /* PopUp.swift */,
-				F534B965291C00C50099EE2C /* Main.storyboard */,
+				F54E5B262923F4D5006D913E /* Service */,
+				F54E5B232923F45A006D913E /* Model */,
+				F54E5B272923F4F9006D913E /* ViewController */,
+				F54E5B252923F49F006D913E /* Controller */,
+				F54E5B242923F473006D913E /* View */,
 				F5E6F0042922E12D00DA34EE /* getAdvice.png */,
 				F534B968291C00C60099EE2C /* Assets.xcassets */,
 				F5B14193291F1590001793E3 /* Untitled.png */,
@@ -113,6 +110,49 @@
 				F534B96D291C00C60099EE2C /* Info.plist */,
 			);
 			path = Shine;
+			sourceTree = "<group>";
+		};
+		F54E5B232923F45A006D913E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5AFD405291D800900518E12 /* AdviceData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F54E5B242923F473006D913E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5B14197291FDA79001793E3 /* PopUp.xib */,
+				F534B965291C00C50099EE2C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F54E5B252923F49F006D913E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5B14195291FDA3E001793E3 /* PopUp.swift */,
+				F5FE3166291EA0C0001FEDE0 /* PushButton.swift */,
+				F5B14199291FE6DA001793E3 /* Style.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F54E5B262923F4D5006D913E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F5AFD403291D787F00518E12 /* Networking.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F54E5B272923F4F9006D913E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F534B963291C00C50099EE2C /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

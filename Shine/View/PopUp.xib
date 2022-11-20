@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-2P-x33" customClass="viewStyle" customModule="Shine" customModuleProvider="target">
-                    <rect key="frame" x="43" y="221" width="307" height="410"/>
+                    <rect key="frame" x="43" y="162" width="307" height="528"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePopUp" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-yr-nOj" customClass="imageSytle" customModule="Shine" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="307" height="410"/>
+                            <rect key="frame" x="0.0" y="0.0" width="307" height="528"/>
                             <color key="backgroundColor" red="0.97647058959999999" green="0.96470588450000005" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -56,10 +56,11 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-fz-gcO" customClass="shareBtn" customModule="Shine" customModuleProvider="target">
-                            <rect key="frame" x="116" y="315" width="75" height="35"/>
+                            <rect key="frame" x="130" y="316" width="49" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
                             <connections>
                                 <action selector="shareSelectedQuote:" destination="-1" eventType="touchUpInside" id="kye-XV-FYJ"/>
                             </connections>
@@ -102,6 +103,7 @@
     </objects>
     <resources>
         <image name="imagePopUp" width="800" height="817"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="x.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

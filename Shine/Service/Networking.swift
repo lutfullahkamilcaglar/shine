@@ -20,10 +20,6 @@ class Networking {
         print(request)
     }
     
-    static var shared = Networking()
-    
-    typealias completionHandler1 = ([Slips]?,String?) -> Void
-    
     func adviceRequest(query: String, completion: @escaping (SlipQuestion?, String?) -> Void){
         
         let adviceURL = "https://api.adviceslip.com/advice/search/"
@@ -39,33 +35,21 @@ class Networking {
             }
         }
         
-//        print(urlString)
-//        let request = AF.request(urlString).responseJSON { response in
-//
-//            print("Result: \(response.result)")
-//            if let json = response.request?.value {
-//                print(json)
-//            }
-//        }
     }
     
-    typealias completionHandler = (Slip?,String?) -> Void
-    
-    func executeJson(completion: @escaping completionHandler) {
-        
+    func executeJson(completion: @escaping (Slip?,String?) -> Void) {
         let adviceURL = "https://api.adviceslip.com/advice"
         let request = AF.request(adviceURL)
         print(request)
         request.validate().responseDecodable(of: AdviceSlip.self) { response in
             switch response.result {
-          case .success(let adviceSlip):
+            case .success(let adviceSlip):
                 completion(adviceSlip.slip, nil)
-          case .failure(let error):
-              completion(nil, error.localizedDescription)
+            case .failure(let error):
+                completion(nil, error.localizedDescription)
             }
         }
     }
     
-    
 }
-    
+
