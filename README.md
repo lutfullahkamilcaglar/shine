@@ -19,3 +19,9 @@ Retrieval of daily advice from an API
 Share functionality allowing users to share the advice via different platforms
 Pop-up view to confirm the sharing action
 User-friendly interface and visually pleasing design using Auto Layout.
+
+## How it looks:
+
+
+https://user-images.githubusercontent.com/73592197/213555197-044556e2-7668-4598-9b14-95ad718670ad.mp4
+
